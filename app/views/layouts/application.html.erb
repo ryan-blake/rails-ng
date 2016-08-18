@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head style="background: #ccc;">
+  <meta charset="utf-8">
+  <meta name="viewport" conent="width=device-width, initial-scale=1">
+
+  <title>AngularRails-docks</title>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <div class="container-fluid">
+    <div class="page-header">
+      <a class="pull-right" href="#/">Home</a>
+      <a class="pull-right" href="#/page">Page</a>
+      <h2><a href="#/" class="text-decoration: none;">APP</a> </h2>
+    </div>
+  </div>
+
+</head>
+<body>
+  <ui-view></ui-view>
+
+
+</body>
+</html>
