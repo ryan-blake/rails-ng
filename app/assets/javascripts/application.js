@@ -15,6 +15,7 @@
 //= require angular
 //= require angular-rails-templates
 //= require angular-ui-router
+//= require app.js
 //= require bootstrap/dist/js/bootstrap
 //= require turbolinks
 //= require_tree .
