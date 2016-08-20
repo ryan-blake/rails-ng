@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # angular templates
 gem 'angular-rails-templates'
 gem 'sprockets', '3.6.3'
+gem 'responders', '~> 2.0'
 
 
 

@@ -1,0 +1,65 @@
+
+<div class="container" ng-app="spotCenter">
+  <h1>spots</h1>
+
+  <div ng-controller="spotsController">
+    <div class="well">
+      <h3>Add a new Spot</h3>
+      <form ng-submit="addSpot()">
+        <div class="row">
+          <div class="col-xs-6">
+            <input type="text" ng-model="newSpot.first_name" class="form-control" placeholder="First Name" />
+          </div>
+          <div class="col-xs-6">
+            <input type="text" ng-model="newSpot.last_name" class="form-control" placeholder="Last Name" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <br />
+            <input type="text" ng-model="newSpot.reason" class="form-control" placeholder="Reason for Visit" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <br />
+            <input type="Submit" value="Add Spot" class="btn btn-primary" />
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <h3>Currently Visiting</h3>
+    <hr />
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>title</th>
+          <th>description</th>
+          <th>Reason for spot</th>
+          <th>length</th>
+          <th>width</th>
+          <th>depth</th>
+          <th>land</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-show="!spots.length">
+          <td colspan="4">No spots in the building.</td>
+        </tr>
+        <tr ng-repeat="spot in spots">
+          <td>{{ spot.title }}</td>
+          <td>{{ spot.description }}</td>
+          <td>{{ spot.length }}</td>
+          <td>{{ spot.width }}</td>
+          <td>{{ spot.depth }}</td>
+          <td>{{ spot.land }}</td>
+
+          <td><a class="btn btn-danger" ng-click="deleteSpot($index)">Remove</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

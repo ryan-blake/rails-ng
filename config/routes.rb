@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
-  root 'application#home'
+  resources :spots, only: [:index, :create, :destroy], defaults: {format: :json}
+    root "spots#index"
+
+  # root 'application#home'
 
 end
