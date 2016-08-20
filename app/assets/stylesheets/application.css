@@ -15,3 +15,16 @@
  *= require_self
 
  */
+.jumbotron {
+  background-color: cyan;
+  padding: 1px;
+  margin: 1px;
+  !important;}
+
+.nav-bar a{
+ color: black;
+}
+.nav-bar a:hover{
+ color: green;
+ text-decoration: none;
+}
