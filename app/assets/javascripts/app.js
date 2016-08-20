@@ -11,7 +11,7 @@ angular
         .state('page', {
           url:'/page',
           templateUrl:'main/_page.html',
-          contrller: 'MainCtrl'
+          controller: 'MainCtrl'
         });
 
         $urlRouterProvider.otherwise('/')
